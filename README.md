@@ -1,5 +1,5 @@
-# Autonomous-Vehicle-Dashboard-Project
-Real-time Autonomous Vehicle Dashboard with YOLOv8: Object detection, tracking, lane segmentation, and trajectory prediction using KITTI dataset.
+# Autonomous Vehicle Dashboard
+Real-time Autonomous Vehicle Dashboard with YOLOv8: Object detection, tracking, lane segmentation, and trajectory prediction.
 
 # Autonomous Vehicle Dashboard Project
 
@@ -33,7 +33,6 @@ AV_Dashboard_Project/
 ## Requirements
 
 - Python 3.8+
-- [Google Colab](https://colab.research.google.com/) recommended for free GPU
 - Libraries:
   ultralytics
   opencv-python-headless
@@ -70,16 +69,6 @@ AV_Dashboard_Project/
 - Trajectories (past positions)  
 - Predicted next positions  
 - Lane segmentation overlay  
-
----
-
-## References
-
-- [YOLOv8 Documentation](https://docs.ultralytics.com/)  
-- [KITTI Dataset](http://www.cvlibs.net/datasets/kitti/)  
-- [ByteTrack Tracker](https://github.com/ifzhang/ByteTrack)  
-
----
 
 
 
