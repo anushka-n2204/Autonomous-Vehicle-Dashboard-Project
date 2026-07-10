@@ -1,76 +1,86 @@
-# Autonomous Vehicle Dashboard
-Real-time Autonomous Vehicle Dashboard with YOLOv8: Object detection, tracking, lane segmentation, and trajectory prediction.
+# 🚗 Autonomous Vehicle Dashboard
 
-# Autonomous Vehicle Dashboard Project
+Real-time Autonomous Vehicle Dashboard with **YOLOv8**: object detection, tracking, lane segmentation, and trajectory prediction.
 
-## Overview
-This project is an **Autonomous Vehicle (AV) Dashboard** that demonstrates real-time **object detection, tracking, lane segmentation, and trajectory prediction** using **YOLOv8** and **ByteTrack**. It processes KITTI dataset images or your own driving videos and provides a visual dashboard with object velocity, predicted paths, and lane overlays.
+## 📖 Overview
 
----
+This project is an **Autonomous Vehicle (AV) Dashboard** that demonstrates real-time 🎯 object detection, 🔄 tracking, 🛣️ lane segmentation, and 📈 trajectory prediction using **YOLOv8** and **ByteTrack**. It processes KITTI dataset images or your own driving videos and renders a visual dashboard with object velocity, predicted paths, and lane overlays.
 
-## Features
+## ✨ Features
 
-- **Object Detection:** Detects cars, pedestrians, and cyclists using YOLOv8.
-- **Tracking:** Tracks detected objects across frames using ByteTrack.
-- **Velocity Estimation:** Calculates approximate velocity (in pixels/frame) for each tracked object.
-- **Trajectory Prediction:** Predicts next positions of moving objects and shows their paths.
-- **Lane Segmentation:** Segments driving lanes using YOLOv8 segmentation model.
-- **Video Output:** Saves processed video with bounding boxes, trajectories, and lane overlays.
+- 🔍 **Object Detection** — detects cars, pedestrians, and cyclists using YOLOv8.
+- 🎯 **Tracking** — tracks detected objects across frames using ByteTrack.
+- 💨 **Velocity Estimation** — calculates approximate velocity (in pixels/frame) for each tracked object.
+- 📈 **Trajectory Prediction** — predicts next positions of moving objects and plots their paths.
+- 🛣️ **Lane Segmentation** — segments driving lanes using a YOLOv8 segmentation model.
+- 🎥 **Video Output** — saves processed video with bounding boxes, trajectories, and lane overlays.
 
----
+## 🛠️ Tech Stack
 
-## Project Structure
-AV_Dashboard_Project/
-├── AV_Dashboard.ipynb # Main Colab notebook
-├── README.md # Project documentation
-├── requirements.txt # Python dependencies
-├── data/ # Optional: Place videos or KITTI dataset here
-└── outputs/ # Processed videos will be saved here
+- 🐍 Python
+- 🧠 Ultralytics YOLOv8 (detection + segmentation)
+- 🔗 ByteTrack (multi-object tracking)
+- 🎞️ OpenCV (`opencv-python-headless`)
+- 🔥 PyTorch / TorchVision / TorchAudio
+- 🔢 NumPy, Pillow, Matplotlib
 
+## 📁 Project Structure
 
----
+```
+Autonomous-Vehicle-Dashboard-Project/
+├── av_dashboard_project.py   # Main pipeline: detection, tracking, lane segmentation, dashboard overlay
+├── requirements.txt          # Python dependencies
+├── README.md                 # Project documentation
+├── data/                     # Optional: place videos or KITTI dataset here
+└── outputs/                  # Processed videos are saved here
+```
 
-## Requirements
+## ✅ Requirements
 
-- Python 3.8+
-- Libraries:
-  ultralytics
-  opencv-python-headless
-  torch
-  torchvision
-  torchaudio
+- 🐍 Python 3.8+
+- 📦 Libraries (see `requirements.txt`):
+  - `ultralytics`
+  - `opencv-python-headless`
+  - `torch`
+  - `torchvision`
+  - `torchaudio`
+  - `numpy`
+  - `Pillow`
+  - `matplotlib`
+- 🗂️ KITTI dataset (optional — you can use your own driving video instead)
 
-  - KITTI dataset (optional, can use your own video)
+## 🚀 Usage
 
----
+1. 📥 Clone the repository and install dependencies:
 
-## Usage
+   ```bash
+   git clone https://github.com/anushka-n2204/Autonomous-Vehicle-Dashboard-Project.git
+   cd Autonomous-Vehicle-Dashboard-Project
+   pip install -r requirements.txt
+   ```
 
-1. **Open the notebook** `AV_Dashboard.ipynb` in Google Colab.  
-2. **Mount Google Drive** to store videos and outputs.  
-3. **Upload videos** in your Drive folder or use KITTI dataset images.  
-4. **Run cells sequentially**:  
+2. 🎬 Add your input video, or KITTI dataset images, to the `data/` folder.
 
- - Install dependencies  
- - Download and verify dataset  
- - Load YOLOv8 models  
- - Run object detection and lane segmentation  
- - Process videos with tracking and dashboard overlay  
+3. ▶️ Run the pipeline:
 
-5. **Download the output video** from `/content/AV_Dashboard_Output.mp4`.
+   ```bash
+   python av_dashboard_project.py
+   ```
 
----
+4. 📤 Find the processed video with detections, tracking IDs, trajectories, and lane overlays in `outputs/`.
 
-## Example Output
+> 💡 The pipeline also runs well in **Google Colab** — mount Google Drive, upload your video/dataset, install dependencies, and run the same steps end-to-end.
 
-- Processed video will show:  
-- Bounding boxes around objects (cars, pedestrians, cyclists)  
-- Object IDs and velocities  
-- Trajectories (past positions)  
-- Predicted next positions  
-- Lane segmentation overlay  
+## 🖼️ Example Output
 
+The processed video shows:
 
+- 🟩 Bounding boxes around objects (cars, pedestrians, cyclists)
+- 🔢 Object IDs and velocities
+- 〰️ Trajectories (past positions)
+- 🔮 Predicted next positions
+- 🛣️ Lane segmentation overlay
 
+## 📝 Notes
 
-
+Built as a hands-on exploration of real-time perception for autonomous driving — combining object detection, multi-object tracking, semantic lane segmentation, and simple motion-based trajectory prediction into one live dashboard view.
